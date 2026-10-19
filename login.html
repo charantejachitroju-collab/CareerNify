@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | CareerNify</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  </head>
+  <body>
+    <div class="auth-layout">
+      <div class="auth-wrap">
+        <aside class="auth-hero">
+          <div class="logo" style="padding: 0; margin-bottom: 28px;">
+            <div class="logo-mark">C</div>
+            <div class="logo-text">CareerNify</div>
+          </div>
+          <h1 style="margin: 0 0 12px; font-size: 2.4rem;">Your next move starts here.</h1>
+          <p style="margin: 0; color: rgba(255,255,255,0.8); line-height: 1.6;">Log in to explore your career dashboard, skill growth, placement opportunities, and interview prep all in one place.</p>
+        </aside>
+
+        <main class="auth-card">
+          <div class="auth-header">
+            <h1>Login</h1>
+            <p>Continue your personalized student journey</p>
+          </div>
+
+          <div id="welcomeMessage" class="inline-message hidden"></div>
+
+          <form id="loginForm">
+            <div class="field" style="margin-bottom: 16px;">
+              <label for="email">Email</label>
+              <input id="email" type="email" placeholder="name@example.com" required />
+            </div>
+            <div class="field" style="margin-bottom: 16px;">
+              <label for="password">Password</label>
+              <input id="password" type="password" placeholder="Enter your password" required />
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px;">
+              <label style="display: flex; align-items: center; gap: 8px; color: var(--muted);"><input type="checkbox" /> Remember me</label>
+              <a href="forgot-password.html" class="muted-link">Forgot password?</a>
+            </div>
+            <button class="btn btn-primary" style="width: 100%;" type="submit">Sign In</button>
+          </form>
+
+          <p style="margin-top: 18px; text-align: center; color: var(--muted);">No account yet? <a class="muted-link" href="register.html">Register</a></p>
+        </main>
+      </div>
+    </div>
+
+    <div id="toast" class="toast" aria-live="polite"></div>
+    <script type="module" src="js/config.js"></script>
+    <script type="module" src="js/login.js"></script>
+  </body>
+</html>

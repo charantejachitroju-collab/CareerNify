@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Career Intelligence | CareerNify</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/modules.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="logo">
+          <div class="logo-mark">C</div>
+          <div class="logo-text">CareerNify</div>
+        </div>
+        <nav class="nav">
+          <a class="nav-item" href="dashboard.html"><span class="icon">◫</span> Dashboard</a>
+          <a class="nav-item active" href="career-intelligence.html"><span class="icon">✦</span> Career Intelligence</a>
+          <a class="nav-item" href="skill-analysis.html"><span class="icon">▣</span> Skill Analysis</a>
+          <a class="nav-item" href="learning-paths.html"><span class="icon">▤</span> Learning Paths</a>
+          <a class="nav-item" href="mock-interviews.html"><span class="icon">◍</span> Mock Interviews</a>
+          <a class="nav-item" href="job-recommendations.html"><span class="icon">⌁</span> Job Recommendations</a>
+          <a class="nav-item" href="placement-drives.html"><span class="icon">◌</span> Placement Drives</a>
+          <a class="nav-item" href="assessments.html"><span class="icon">◫</span> Assessments</a>
+          <a class="nav-item" href="certificates.html"><span class="icon">✓</span> Certificates</a>
+          <a class="nav-item" href="profile.html"><span class="icon">⚙</span> Settings</a>
+          <a class="nav-item" href="support.html"><span class="icon">?</span> Help &amp; Support</a>
+        </nav>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div class="search"><span>⌕</span><input type="text" placeholder="Search career paths" /></div>
+          <div class="topbar-actions">
+            <button class="icon-btn" type="button">🔔</button>
+            <div class="user-badge"><div class="avatar">S</div><strong>Student</strong></div>
+          </div>
+        </header>
+
+        <div class="page-body">
+          <div class="page-header">
+            <div>
+              <h1>Career Intelligence</h1>
+              <p>Match your profile with high-potential career tracks.</p>
+            </div>
+            <button class="btn btn-primary" type="button">Run Assessment</button>
+          </div>
+
+          <div class="metrics-row">
+            <div class="card metric-box"><div class="label">Career Match</div><div class="value">85%</div></div>
+            <div class="card metric-box"><div class="label">Skill Gap</div><div class="value">3 Gaps</div></div>
+            <div class="card metric-box"><div class="label">Recommended Role</div><div class="value">Full-Stack</div></div>
+          </div>
+
+          <div class="list-layout" style="margin-top: 24px;">
+            <section class="content-panel">
+              <header class="section-title"><h2>Top Career Matches</h2></header>
+              <div class="career-list">
+                <article class="career-item">
+                  <strong>Full-Stack Developer</strong>
+                  <div class="meta-row"><span class="badge success">92% Match</span><span>Strong fit</span></div>
+                  <p class="text-muted">Blends front-end interaction design with reliable backend systems and API logic.</p>
+                  <div class="skill-tags"><span class="skill-tag">JavaScript</span><span class="skill-tag">SQL</span><span class="skill-tag">APIs</span></div>
+                  <div class="inline-actions"><button class="btn btn-secondary" type="button">View Details</button><button class="btn btn-ghost" type="button">Save</button></div>
+                </article>
+                <article class="career-item">
+                  <strong>Data Analyst</strong>
+                  <div class="meta-row"><span class="badge neutral">81% Match</span><span>Good fit</span></div>
+                  <p class="text-muted">Strong for students with analytical reasoning, dashboarding, and SQL-driven reporting.</p>
+                  <div class="skill-tags"><span class="skill-tag">SQL</span><span class="skill-tag">Excel</span><span class="skill-tag">Reporting</span></div>
+                  <div class="inline-actions"><button class="btn btn-secondary" type="button">View Details</button><button class="btn btn-ghost" type="button">Save</button></div>
+                </article>
+              </div>
+            </section>
+
+            <aside class="sidebar-card card">
+              <h3>Assessment Snapshot</h3>
+              <div class="detail-block">
+                <strong>Interests</strong>
+                <p class="text-muted">UI design, systems thinking, productivity tools</p>
+              </div>
+              <div class="detail-block">
+                <strong>Current Strengths</strong>
+                <p class="text-muted">HTML/CSS, JavaScript, communication, project ownership</p>
+              </div>
+              <div class="detail-block">
+                <strong>Next Steps</strong>
+                <p class="text-muted">Strengthen backend fundamentals, SQL, and API design consistency.</p>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </main>
+    </div>
+    <div id="toast" class="toast" aria-live="polite"></div>
+    <script type="module" src="js/config.js"></script>
+  </body>
+</html>

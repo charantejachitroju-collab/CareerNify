@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skill Analysis | CareerNify</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/modules.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="logo"><div class="logo-mark">C</div><div class="logo-text">CareerNify</div></div>
+        <nav class="nav">
+          <a class="nav-item" href="dashboard.html"><span class="icon">◫</span> Dashboard</a>
+          <a class="nav-item" href="career-intelligence.html"><span class="icon">✦</span> Career Intelligence</a>
+          <a class="nav-item active" href="skill-analysis.html"><span class="icon">▣</span> Skill Analysis</a>
+          <a class="nav-item" href="learning-paths.html"><span class="icon">▤</span> Learning Paths</a>
+          <a class="nav-item" href="mock-interviews.html"><span class="icon">◍</span> Mock Interviews</a>
+          <a class="nav-item" href="job-recommendations.html"><span class="icon">⌁</span> Job Recommendations</a>
+          <a class="nav-item" href="placement-drives.html"><span class="icon">◌</span> Placement Drives</a>
+          <a class="nav-item" href="assessments.html"><span class="icon">◫</span> Assessments</a>
+          <a class="nav-item" href="certificates.html"><span class="icon">✓</span> Certificates</a>
+          <a class="nav-item" href="profile.html"><span class="icon">⚙</span> Settings</a>
+          <a class="nav-item" href="support.html"><span class="icon">?</span> Help &amp; Support</a>
+        </nav>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div class="search"><span>⌕</span><input type="text" placeholder="Search skills" /></div>
+          <div class="topbar-actions"><button class="icon-btn" type="button">🔔</button><div class="user-badge"><div class="avatar">S</div><strong>Student</strong></div></div>
+        </header>
+
+        <div class="page-body">
+          <div class="page-header">
+            <div><h1>Skill Analysis</h1><p>Track your technical and professional strengths.</p></div>
+            <button class="btn btn-primary" type="button">Add Skill</button>
+          </div>
+
+          <div class="metrics-row">
+            <div class="card metric-box"><div class="label">Current Score</div><div class="value">82%</div></div>
+            <div class="card metric-box"><div class="label">Skill Gaps</div><div class="value">4</div></div>
+            <div class="card metric-box"><div class="label">Target Level</div><div class="value">Advanced</div></div>
+          </div>
+
+          <div class="content-panel" style="margin-top: 24px;">
+            <div class="skill-list">
+              <div class="skill-row">
+                <strong>JavaScript</strong>
+                <div><div class="progress"><span class="progress-bar" style="width: 88%"></span></div></div>
+                <span class="text-muted">88%</span>
+              </div>
+              <div class="skill-row">
+                <strong>HTML / CSS</strong>
+                <div><div class="progress"><span class="progress-bar" style="width: 91%"></span></div></div>
+                <span class="text-muted">91%</span>
+              </div>
+              <div class="skill-row">
+                <strong>SQL</strong>
+                <div><div class="progress"><span class="progress-bar" style="width: 67%"></span></div></div>
+                <span class="text-muted">67%</span>
+              </div>
+              <div class="skill-row">
+                <strong>API Design</strong>
+                <div><div class="progress"><span class="progress-bar" style="width: 52%"></span></div></div>
+                <span class="text-muted">52%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script type="module" src="js/config.js"></script>
+  </body>
+</html>

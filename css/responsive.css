@@ -1,0 +1,9 @@
+@media (max-width: 700px) {
+  .topbar { height: auto; padding: 10px 12px; flex-wrap: wrap; gap: 12px; }
+  .topbar .search { width: 100%; }
+  .topbar-actions { width: 100%; justify-content: space-between; }
+  .page-body { padding: 14px 12px 24px; }
+  .content-panel { padding: 18px 14px; }
+  .stats-grid { grid-template-columns: 1fr; }
+  .card, .panel, .auth-card { border-radius: 16px; }
+}

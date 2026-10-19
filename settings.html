@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings | CareerNify</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/modules.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="logo"><div class="logo-mark">C</div><div class="logo-text">CareerNify</div></div>
+        <nav class="nav">
+          <a class="nav-item" href="dashboard.html"><span class="icon">◫</span> Dashboard</a>
+          <a class="nav-item" href="career-intelligence.html"><span class="icon">✦</span> Career Intelligence</a>
+          <a class="nav-item" href="skill-analysis.html"><span class="icon">▣</span> Skill Analysis</a>
+          <a class="nav-item" href="learning-paths.html"><span class="icon">▤</span> Learning Paths</a>
+          <a class="nav-item" href="mock-interviews.html"><span class="icon">◍</span> Mock Interviews</a>
+          <a class="nav-item" href="job-recommendations.html"><span class="icon">⌁</span> Job Recommendations</a>
+          <a class="nav-item" href="placement-drives.html"><span class="icon">◌</span> Placement Drives</a>
+          <a class="nav-item" href="assessments.html"><span class="icon">◫</span> Assessments</a>
+          <a class="nav-item" href="certificates.html"><span class="icon">✓</span> Certificates</a>
+          <a class="nav-item active" href="settings.html"><span class="icon">⚙</span> Settings</a>
+          <a class="nav-item" href="support.html"><span class="icon">?</span> Help &amp; Support</a>
+        </nav>
+      </aside>
+      <main class="main-panel">
+        <header class="topbar"><div class="search"><span>⌕</span><input type="text" placeholder="Search settings" /></div><div class="topbar-actions"><button class="icon-btn" type="button">🔔</button><div class="user-badge"><div class="avatar">S</div><strong>Student</strong></div></div></header>
+        <div class="page-body"><div class="page-header"><div><h1>Settings</h1><p>Manage notifications and account preferences.</p></div><button class="btn btn-primary" type="button">Save</button></div><div class="content-panel"><div class="detail-block"><strong>Notification preferences</strong><p class="text-muted">Email, push reminders, and placement alerts.</p></div><div class="detail-block"><strong>Privacy</strong><p class="text-muted">Profile visibility and data sharing controls.</p></div></div></div>
+      </main>
+    </div>
+    <script type="module" src="js/config.js"></script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register | CareerNify</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  </head>
+  <body>
+    <div class="auth-layout">
+      <div class="auth-wrap">
+        <aside class="auth-hero">
+          <div class="logo" style="padding: 0; margin-bottom: 28px;">
+            <div class="logo-mark">C</div>
+            <div class="logo-text">CareerNify</div>
+          </div>
+          <h1 style="margin: 0 0 12px; font-size: 2.4rem;">Create your profile.</h1>
+          <p style="margin: 0; color: rgba(255,255,255,0.8); line-height: 1.6;">Set up your student profile and unlock personalized skills, job matches, and placement support.</p>
+        </aside>
+
+        <main class="auth-card">
+          <div class="auth-header">
+            <h1>Register</h1>
+            <p>Create your CareerNify student account</p>
+          </div>
+
+          <form id="registerForm">
+            <div class="field" style="margin-bottom: 16px;">
+              <label for="fullName">Full name</label>
+              <input id="fullName" type="text" placeholder="Your full name" required />
+            </div>
+            <div class="field" style="margin-bottom: 16px;">
+              <label for="email">Email</label>
+              <input id="email" type="email" placeholder="name@example.com" required />
+            </div>
+            <div class="field" style="margin-bottom: 16px;">
+              <label for="password">Password</label>
+              <input id="password" type="password" placeholder="At least 6 characters" required />
+            </div>
+            <button class="btn btn-primary" style="width: 100%;" type="submit">Create Account</button>
+          </form>
+
+          <p style="margin-top: 18px; text-align: center; color: var(--muted);">Already have an account? <a class="muted-link" href="login.html">Login</a></p>
+        </main>
+      </div>
+    </div>
+
+    <div id="toast" class="toast" aria-live="polite"></div>
+    <script type="module" src="js/config.js"></script>
+    <script type="module" src="js/register.js"></script>
+  </body>
+</html>

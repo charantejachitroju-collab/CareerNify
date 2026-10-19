@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Recommendations | CareerNify</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/modules.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="logo"><div class="logo-mark">C</div><div class="logo-text">CareerNify</div></div>
+        <nav class="nav">
+          <a class="nav-item" href="dashboard.html"><span class="icon">◫</span> Dashboard</a>
+          <a class="nav-item" href="career-intelligence.html"><span class="icon">✦</span> Career Intelligence</a>
+          <a class="nav-item" href="skill-analysis.html"><span class="icon">▣</span> Skill Analysis</a>
+          <a class="nav-item" href="learning-paths.html"><span class="icon">▤</span> Learning Paths</a>
+          <a class="nav-item" href="mock-interviews.html"><span class="icon">◍</span> Mock Interviews</a>
+          <a class="nav-item active" href="job-recommendations.html"><span class="icon">⌁</span> Job Recommendations</a>
+          <a class="nav-item" href="placement-drives.html"><span class="icon">◌</span> Placement Drives</a>
+          <a class="nav-item" href="assessments.html"><span class="icon">◫</span> Assessments</a>
+          <a class="nav-item" href="certificates.html"><span class="icon">✓</span> Certificates</a>
+          <a class="nav-item" href="profile.html"><span class="icon">⚙</span> Settings</a>
+          <a class="nav-item" href="support.html"><span class="icon">?</span> Help &amp; Support</a>
+        </nav>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div class="search"><span>⌕</span><input type="text" placeholder="Search jobs" /></div>
+          <div class="topbar-actions"><button class="icon-btn" type="button">🔔</button><div class="user-badge"><div class="avatar">S</div><strong>Student</strong></div></div>
+        </header>
+
+        <div class="page-body">
+          <div class="page-header">
+            <div><h1>Job Recommendations</h1><p>Explore openings aligned to your profile.</p></div>
+            <button class="btn btn-primary" type="button">Save Search</button>
+          </div>
+
+          <div class="content-panel">
+            <div class="career-list">
+              <article class="career-item">
+                <strong>Junior Frontend Engineer</strong>
+                <div class="meta-row"><span class="badge success">89% Match</span><span>Bengaluru</span><span>₹5L–₹9L</span></div>
+                <p class="text-muted">Build accessible, responsive UI experiences and collaborate with product and design teams.</p>
+                <div class="skill-tags"><span class="skill-tag">JavaScript</span><span class="skill-tag">UI/UX</span><span class="skill-tag">HTML/CSS</span></div>
+                <div class="inline-actions"><button class="btn btn-secondary" type="button">Apply</button><button class="btn btn-ghost" type="button">Save</button></div>
+              </article>
+              <article class="career-item">
+                <strong>Data Analyst Intern</strong>
+                <div class="meta-row"><span class="badge neutral">79% Match</span><span>Remote</span><span>₹3L–₹6L</span></div>
+                <p class="text-muted">Analyze operational metrics and support reporting dashboards.</p>
+                <div class="skill-tags"><span class="skill-tag">SQL</span><span class="skill-tag">Data Viz</span><span class="skill-tag">Communication</span></div>
+                <div class="inline-actions"><button class="btn btn-secondary" type="button">Apply</button><button class="btn btn-ghost" type="button">Save</button></div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script type="module" src="js/config.js"></script>
+  </body>
+</html>

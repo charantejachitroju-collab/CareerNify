@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | CareerNify</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/modules.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="logo">
+          <div class="logo-mark">C</div>
+          <div class="logo-text">CareerNify</div>
+        </div>
+
+        <nav class="nav">
+          <a class="nav-item active" data-href="dashboard.html" href="dashboard.html"><span class="icon">◫</span> Dashboard</a>
+          <a class="nav-item" data-href="career-intelligence.html" href="career-intelligence.html"><span class="icon">✦</span> Career Intelligence</a>
+          <a class="nav-item" data-href="skill-analysis.html" href="skill-analysis.html"><span class="icon">▣</span> Skill Analysis</a>
+          <a class="nav-item" data-href="learning-paths.html" href="learning-paths.html"><span class="icon">▤</span> Learning Paths</a>
+          <a class="nav-item" data-href="mock-interviews.html" href="mock-interviews.html"><span class="icon">◍</span> Mock Interviews</a>
+          <a class="nav-item" data-href="job-recommendations.html" href="job-recommendations.html"><span class="icon">⌁</span> Job Recommendations</a>
+          <a class="nav-item" data-href="placement-drives.html" href="placement-drives.html"><span class="icon">◌</span> Placement Drives</a>
+          <a class="nav-item" data-href="assessments.html" href="assessments.html"><span class="icon">◫</span> Assessments</a>
+          <a class="nav-item" data-href="certificates.html" href="certificates.html"><span class="icon">✓</span> Certificates</a>
+          <a class="nav-item" data-href="profile.html" href="profile.html"><span class="icon">⚙</span> Settings</a>
+          <a class="nav-item" data-href="support.html" href="support.html"><span class="icon">?</span> Help &amp; Support</a>
+        </nav>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div class="search">
+            <span>⌕</span>
+            <input type="text" placeholder="Search" aria-label="Search" />
+          </div>
+          <div class="topbar-actions">
+            <button class="icon-btn" type="button" aria-label="Notifications"><span>🔔</span><span class="dot"></span></button>
+            <div class="user-badge">
+              <div class="avatar" id="userAvatar">S</div>
+              <div>
+                <strong id="userName">Student</strong>
+              </div>
+            </div>
+            <button id="logoutBtn" class="btn btn-ghost" type="button" style="margin-left: 10px;">Logout</button>
+          </div>
+        </header>
+
+        <div class="page-body">
+          <div class="dashboard-board">
+            <section class="hero-panel">
+              <p class="text-muted" style="margin: 0 0 12px; color: rgba(255,255,255,0.8);">Welcome back</p>
+              <h1 id="welcomeName" class="title">Student</h1>
+              <p id="welcomeMessage" class="subtitle">Your next step is to keep leveling up and align your skills with your preferred career goal.</p>
+              <div class="hero-goal"><span>🎯</span> <span id="careerGoal">Career Goal: Full-Stack Developer</span></div>
+            </section>
+
+            <aside class="score-card card">
+              <div class="score-ring" aria-label="Career Match Score 85 percent">
+                <span class="score-value">85%</span>
+              </div>
+              <div class="score-meta">
+                <h3>Career Readiness</h3>
+                <p class="text-muted">Strongly aligned with your target role.</p>
+                <button class="btn btn-secondary" type="button">View Details</button>
+              </div>
+            </aside>
+          </div>
+
+          <section class="stats-grid">
+            <article class="stat-card card">
+              <div class="stat-top">
+                <div>
+                  <div class="stat-label">Skills Completed</div>
+                  <div id="skillsCompleted" class="stat-value">0</div>
+                </div>
+                <div class="stat-icon purple">⚡</div>
+              </div>
+            </article>
+
+            <article class="stat-card card">
+              <div class="stat-top">
+                <div>
+                  <div class="stat-label">Certifications Earned</div>
+                  <div id="certificationsEarned" class="stat-value">0</div>
+                </div>
+                <div class="stat-icon blue">✓</div>
+              </div>
+            </article>
+
+            <article class="stat-card card">
+              <div class="stat-top">
+                <div>
+                  <div class="stat-label">Mock Interviews</div>
+                  <div id="mockInterviewsCompleted" class="stat-value">0</div>
+                </div>
+                <div class="stat-icon teal">◉</div>
+              </div>
+            </article>
+
+            <article class="stat-card card">
+              <div class="stat-top">
+                <div>
+                  <div class="stat-label">Profile Strength</div>
+                  <div id="profileStrength" class="stat-value">0%</div>
+                </div>
+                <div class="stat-icon orange">★</div>
+              </div>
+            </article>
+          </section>
+
+          <section class="panel resume-panel" aria-labelledby="resumeHeading">
+            <header class="resume-header">
+              <div class="resume-heading-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M7 3.75h6.5L19 9.25v10A1.75 1.75 0 0 1 17.25 21h-10A1.75 1.75 0 0 1 5.5 19.25v-13A2.5 2.5 0 0 1 8 3.75Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                  <path d="M13 4v5.5h5.5M8.5 14h7M8.5 17.5h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                  <path d="m16.7 12.8.45 1.4 1.4.45-1.4.45-.45 1.4-.45-1.4-1.4-.45 1.4-.45.45-1.4Z" fill="currentColor"/>
+                </svg>
+              </div>
+              <div class="resume-heading-copy">
+                <span class="resume-eyebrow">YOUR NEXT CAREER MOVE</span>
+                <h3 id="resumeHeading">Make your resume work harder</h3>
+                <p>Get a clearer picture of where you fit and what to improve next.</p>
+              </div>
+            </header>
+            <div class="resume-upload-layout">
+              <div class="resume-upload">
+                <label id="resumeDropzone" class="resume-dropzone" for="resumeFile">
+                  <input id="resumeFile" class="resume-file-input" type="file" accept=".pdf,.docx,.txt,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,text/plain" aria-describedby="resumeFileHelp" />
+                  <span class="resume-upload-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none">
+                      <path d="M12 15V4m0 0L8 8m4-4 4 4M5 14.5v4A1.5 1.5 0 0 0 6.5 20h11a1.5 1.5 0 0 0 1.5-1.5v-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                  <span class="resume-dropzone-title">Drop your resume here</span>
+                  <span class="resume-dropzone-copy">or <span class="resume-browse-link">browse files</span></span>
+                  <span id="resumeFileName" class="resume-file-name">PDF, DOCX, or TXT · up to 5 MB</span>
+                  <span id="resumeFileHelp" class="sr-only">Choose one resume file. Your resume is private to your account.</span>
+                </label>
+                <button id="analyzeResumeBtn" class="btn btn-primary resume-analyze-button" type="button" disabled>
+                  <span>Analyze my resume</span>
+                  <span aria-hidden="true">→</span>
+                </button>
+                <p id="resumeStatus" class="resume-status" role="status" aria-live="polite">
+                  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <rect x="5" y="10" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.7"/>
+                    <path d="M8 10V7a4 4 0 0 1 8 0v3m-4 4v2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                  </svg>
+                  <span class="resume-status-copy">Your resume stays private. Analysis happens right in your browser.</span>
+                </p>
+              </div>
+              <aside class="resume-benefits" aria-label="What the resume review includes">
+                <span class="resume-benefits-title">INSIDE YOUR REVIEW</span>
+                <div class="resume-benefit">
+                  <span class="resume-benefit-icon resume-benefit-purple" aria-hidden="true">↗</span>
+                  <span><strong>Career matches</strong><small>Explore roles that fit your skills</small></span>
+                </div>
+                <div class="resume-benefit">
+                  <span class="resume-benefit-icon resume-benefit-blue" aria-hidden="true">✳</span>
+                  <span><strong>Skills spotlight</strong><small>See the strengths in your resume</small></span>
+                </div>
+                <div class="resume-benefit">
+                  <span class="resume-benefit-icon resume-benefit-green" aria-hidden="true">✓</span>
+                  <span><strong>Actionable tips</strong><small>Know what to improve next</small></span>
+                </div>
+              </aside>
+            </div>
+            <div id="resumeTargetCareer" class="resume-target-career" aria-live="polite"></div>
+            <div id="resumeAnalysis" class="resume-analysis" aria-live="polite"></div>
+          </section>
+
+          <section class="grid" style="margin-top: 24px; grid-template-columns: 1.3fr 0.9fr;">
+            <div class="panel">
+              <header>
+                <h3>Recommended Career Paths</h3>
+                <button class="btn btn-ghost" type="button">View All</button>
+              </header>
+              <div id="careerList" class="career-list"></div>
+            </div>
+
+            <div class="panel">
+              <header>
+                <h3>Skill Progress</h3>
+                <button class="btn btn-ghost" type="button">View Skill Gaps</button>
+              </header>
+              <div id="skillList" class="skill-list"></div>
+            </div>
+          </section>
+
+          <section class="grid" style="margin-top: 24px; grid-template-columns: 1fr 1fr;">
+            <div class="panel">
+              <header>
+                <h3>Upcoming Placement Drives</h3>
+                <button class="btn btn-ghost" type="button">View All</button>
+              </header>
+              <div id="driveList" class="drive-list"></div>
+            </div>
+
+            <div class="panel">
+              <header>
+                <h3>Learning &amp; Interviews</h3>
+                <button class="btn btn-ghost" type="button">Explore</button>
+              </header>
+              <div id="resourceList" class="resource-list"></div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <div id="toast" class="toast" aria-live="polite"></div>
+    <script type="module" src="js/config.js"></script>
+    <script type="module" src="js/dashboard.js"></script>
+    <script type="module" src="js/profile.js"></script>
+  </body>
+</html>
